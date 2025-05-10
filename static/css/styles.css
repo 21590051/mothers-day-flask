@@ -17,6 +17,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
 }
 
 body {
@@ -24,13 +25,14 @@ body {
     line-height: 1.6;
     color: var(--text);
     background-color: var(--white);
+    overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 h1, h2, h3 {
@@ -47,6 +49,12 @@ h2 {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+img {
+    max-width: 100%; /* Imágenes responsivas */
+    height: auto;
+    display: block;
 }
 
 /* Navbar */
@@ -87,6 +95,16 @@ a {
     color: var(--primary);
 }
 
+/* Menú móvil */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -97,11 +115,12 @@ a {
     align-items: center;
     text-align: center;
     position: relative;
+    padding: 0 20px;
 }
 
 .hero-content {
     max-width: 800px;
-    padding: 0 20px;
+    width: 100%;
 }
 
 .heart-icon {
@@ -157,7 +176,7 @@ a {
 
 /* Gallery Section */
 .gallery {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: var(--background);
 }
 
@@ -196,7 +215,7 @@ a {
 
 /* Qualities Section */
 .qualities {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .qualities-grid {
@@ -220,13 +239,13 @@ a {
 
 /* Message Section */
 .message {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: var(--background);
 }
 
 .message-card {
     background-color: white;
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     max-width: 800px;
@@ -257,8 +276,14 @@ footer {
     opacity: 0.8;
 }
 
-/* Responsive */
+/* Media Queries para Responsividad */
+
+/* Tablets (768px y menos) */
 @media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -267,12 +292,103 @@ footer {
         font-size: 1rem;
     }
     
-    .qualities-grid,
     .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .qualities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .message-card {
+        padding: 25px;
+    }
+}
+
+/* Móviles grandes (576px y menos) */
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .gallery-grid,
+    .qualities-grid {
         grid-template-columns: 1fr;
     }
     
     .message-card {
         padding: 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+/* Móviles pequeños (375px y menos) */
+@media (max-width: 375px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+    }
+    
+    .gallery-item img {
+        height: 180px;
+    }
+    
+    .message-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media (max-width: 320px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .gallery-item img {
+        height: 160px;
     }
 }
