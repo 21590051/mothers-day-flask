@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mamá - Feliz Día de la Madre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Para: La Mejor Mamá</a>
+            <div class="nav-links">
+                <a href="#galeria">Galería</a>
+                <a href="#cualidades">Cualidades</a>
+                <a href="#mensaje">Mensaje</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="heart-icon">❤️</div>
+            <h1>Feliz Día, Mamá</h1>
+            <p>Esta es una manera de demostrar mi amor
+                 a la mujer más importante de mi vida!</p>
+            <a href="#galeria" class="btn">Explorar</a>
+        </div>
+        <div class="scroll-down">
+            <a href="#galeria">↓</a>
+        </div>
+    </section>
+
+    <!-- Sección Galería -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2>PARA QUE RECUERDES LO VALIOSA, VALIENTE E IMPORTANTE QUE ERES! </h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2025-05-10 at 12.25.31 AM.jpeg') }}" alt="Recuerdo 1">
+                    <div class="gallery-caption">
+                        <h3>Orgullosa de Mi Mamá. </h3>
+                        <p>Siempre voy a estar orgullosa de la gran mujer que eres. 
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2025-05-10 at 12.14.16 AM.jpeg') }}" alt="Recuerdo 2">
+                    <div class="gallery-caption">
+                        <h3>Tu Vida siempre se Celebra.</h3>
+                        <p>Siempre estaremos para hacer tu cumpleaños especial</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2025-05-10 at 12.25.30 AM (2).jpeg') }}" alt="Recuerdo 3">
+                    <div class="gallery-caption">
+                        <h3>Tenemos a la Mejor Mamá.</h3>
+                        <p>Mamá, eres el corazón que nos une. Gracias por tu amor infinito. ¡Te amamos!" ❤️</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2025-05-10 at 12.25.32 AM (1).jpeg') }}" alt="Recuerdo 4">
+                    <div class="gallery-caption">
+                        <h3>Eres mi ejemplo a seguir.</h3>
+                        <p>Gracias por darnos tantas oportunidades con tu esfuerzo dia con dia,
+                            eres mi ejemplo a seguir por nunca rendirte! 
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2025-05-10 at 12.25.30 AM.jpeg') }}" alt="Recuerdo 5">
+                    <div class="gallery-caption">
+                        <h3>Familia</h3>
+                        <p>Toda tu familia te amamos demasiado.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2025-05-10 at 12.25.32 AM (2).jpeg') }}" alt="Recuerdo 6">
+                    <div class="gallery-caption">
+                        <h3>Feliz Día, Mamá</h3>
+                        <p>Feliz día, espero te guste este regalo,te amo mamá ❤️ </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cualidades -->
+    <section id="cualidades" class="qualities">
+        <div class="container">
+            <h2>Lo Que Te Hace Especial</h2>
+            <div class="qualities-grid">
+                <div class="quality-card">
+                    <h3>Tu Amor Incondicional</h3>
+                    <p>Siempre has estado ahí para mí, en los buenos y malos momentos, brindándome tu amor sin condiciones.</p>
+                </div>
+                <div class="quality-card">
+                    <h3>Tu Fortaleza</h3>
+                    <p>Me has enseñado a ser fuerte y a enfrentar los desafíos de la vida con valentía y determinación.</p>
+                </div>
+                <div class="quality-card">
+                    <h3>Tu Sabiduría</h3>
+                    <p>Tus consejos y enseñanzas han guiado mi camino y me han ayudado a convertirme en quien soy hoy.</p>
+                </div>
+                <div class="quality-card">
+                    <h3>Tu Paciencia</h3>
+                    <p>Siempre has tenido la paciencia para soportarnos, entendernos y apoyarnos en cada momento.</p>
+                </div>
+                <div class="quality-card">
+                    <h3>Tu Generosidad</h3>
+                    <p>Tu corazón generoso siempre está dispuesto a dar sin esperar nada a cambio.</p>
+                </div>
+                <div class="quality-card">
+                    <h3>Tu Amor Hecho Acciones </h3>
+                    <p>Tu amor no se decía, se hacía: en la cobija que me tapabas, 
+                        la comida que guardabas y ese 'cuídate' de cada día.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Mensaje -->
+    <section id="mensaje" class="message">
+        <div class="container">
+            <h2>Mi Mensaje Para Ti</h2>
+            <div class="message-card">
+                <p>Querida mamá,</p>
+                <p>No hay palabras suficientes para expresar lo agradecida que estoy por tenerte en mi vida. Has sido mi guía, mi apoyo y mi inspiración desde el primer día.</p>
+                <p>Gracias por todos los sacrificios que has hecho por mí, por tu amor incondicional y por enseñarme a ser la persona que soy hoy. Cada logro en mi vida tiene tu huella.</p>
+                <p>Este pequeño sitio web es solo una pequeña muestra de mi amor y gratitud hacia ti. Espero que te haga sonreír y te recuerde lo especial que eres para mí, no solo hoy, sino todos los días.</p>
+                <p>TE AMOOOO ❤️ </p>
+                <p class="signature">- Tu Princesa </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Hecho con ❤️ para la mejor mamá del mundo</p>
+            <p class="copyright">Feliz Día de la Madre!!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para el desplazamiento suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
